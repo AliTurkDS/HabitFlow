@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f0a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#050d05;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ade80;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16a34a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#15803d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fef08a;stop-opacity:0.9" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="220" fill="url(#bgGrad)"/>
+
+  <!-- Ambient glow -->
+  <circle cx="512" cy="420" r="260" fill="#22c55e" opacity="0.06"/>
+
+  <!-- Progress ring track -->
+  <circle cx="512" cy="420" r="218" fill="none" stroke="#1a2e1a" stroke-width="28"/>
+
+  <!-- Progress ring filled ~80% -->
+  <circle cx="512" cy="420" r="218" fill="none" stroke="url(#ringGrad)" stroke-width="28"
+    stroke-linecap="round"
+    stroke-dasharray="1095 1372"
+    stroke-dashoffset="343"
+    transform="rotate(-90 512 420)"
+    filter="url(#glow)"/>
+
+  <!-- Ring end dot -->
+  <circle cx="686" cy="316" r="16" fill="#4ade80" filter="url(#glow)"/>
+
+  <!-- Inner circle -->
+  <circle cx="512" cy="420" r="182" fill="#0d1a0d"/>
+
+  <!-- Habit grid dots row 1 -->
+  <rect x="404" y="326" width="34" height="34" rx="10" fill="#22c55e" opacity="0.9"/>
+  <rect x="449" y="326" width="34" height="34" rx="10" fill="#22c55e" opacity="0.9"/>
+  <rect x="494" y="326" width="34" height="34" rx="10" fill="#22c55e" opacity="0.9"/>
+  <rect x="539" y="326" width="34" height="34" rx="10" fill="#22c55e" opacity="0.9"/>
+  <rect x="584" y="326" width="34" height="34" rx="10" fill="#1a2e1a"/>
+  <rect x="629" y="326" width="34" height="34" rx="10" fill="#1a2e1a"/>
+
+  <!-- Habit grid dots row 2 -->
+  <rect x="404" y="370" width="34" height="34" rx="10" fill="#22c55e" opacity="0.9"/>
+  <rect x="449" y="370" width="34" height="34" rx="10" fill="#22c55e" opacity="0.9"/>
+  <rect x="494" y="370" width="34" height="34" rx="10" fill="#22c55e" opacity="0.9"/>
+  <rect x="539" y="370" width="34" height="34" rx="10" fill="#1a2e1a"/>
+  <rect x="584" y="370" width="34" height="34" rx="10" fill="#1a2e1a"/>
+  <rect x="629" y="370" width="34" height="34" rx="10" fill="#1a2e1a"/>
+
+  <!-- Big checkmark -->
+  <polyline points="420,445 480,508 590,388"
+    stroke="url(#greenGrad)" stroke-width="38" fill="none"
+    stroke-linecap="round" stroke-linejoin="round"
+    filter="url(#glow)"/>
+
+  <!-- Flame top-right -->
+  <g transform="translate(648, 278) scale(0.7)">
+    <path d="M 40 110 C 10 90 0 60 20 30 C 25 50 35 55 40 45 C 42 70 55 75 55 55 C 70 70 75 95 60 110 Z"
+      fill="url(#flameGrad)" filter="url(#glow)"/>
+    <path d="M 40 100 C 25 85 22 68 34 50 C 36 62 42 65 44 58 C 52 70 55 85 48 100 Z"
+      fill="#fef08a" opacity="0.7"/>
+  </g>
+
+  <!-- ONE LINE wordmark: Habit in white, Flow in green, centered -->
+  <text x="512" y="800" font-family="Arial Black, Arial, sans-serif"
+    font-size="148" font-weight="900" text-anchor="middle" letter-spacing="-4">
+    <tspan fill="#ffffff">Habit</tspan><tspan fill="#22c55e">Flow</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="512" y="888" font-family="Arial, sans-serif" font-size="32"
+    font-weight="400" fill="#2d5a2d" text-anchor="middle" letter-spacing="7">BUILD · STREAK · GROW</text>
+
+</svg>
