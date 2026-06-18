@@ -15,6 +15,13 @@ HabitFlow is a Flutter mobile app for building daily habits and keeping streaks 
   <img src="screenshots/6.jpeg" width="16%" />
 </p>
 
+<p align="center">
+  <img src="screenshots/7.jpeg" width="16%" />
+  <img src="screenshots/8.jpeg" width="16%" />
+  <img src="screenshots/9.jpeg" width="16%" />
+  <img src="screenshots/10.jpeg" width="16%" />
+</p>
+
 ## Features
 
 | Feature | Detail |
